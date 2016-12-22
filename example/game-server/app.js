@@ -16,9 +16,9 @@ app.configure('development', 'gamehttp', function () {
     app.use(httpPlugin, {
         http: app.get('httpConfig').gamehttp,
     });
-    app.use(httpPlugin, {
-        http: app.get('httpConfig').gamehttps,
-    });
+    // app.use(httpPlugin, {
+    //     http: app.get('httpConfig').gamehttps,
+    // });
 
     httpPlugin.filter(require('./app/filters/log')());
     httpPlugin.afterFilter(function (req, res) {
