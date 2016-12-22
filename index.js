@@ -1,28 +1,28 @@
 'use strict';
 module.exports = {
 
-	components: __dirname + '/lib/components/',
+    components: __dirname + '/lib/components/',
 
-	events: __dirname + '/lib/events/',
+    events: __dirname + '/lib/events/',
 
-	beforeFilters: [],
-	afterFilters: [],
+    beforeFilters: [],
+    afterFilters: [],
 
-	filter: function(filter) {
-		if (filter.before) {
-			this.beforeFilters.push(filter.before.bind(filter));
-		}
-		if (filter.after) {
-			this.afterFilters.push(filter.after.bind(filter));
-		}
-	},
+    filter: function (filter) {
+        if (filter.before) {
+            this.beforeFilters.push(filter.before.bind(filter));
+        }
+        if (filter.after) {
+            this.afterFilters.push(filter.after.bind(filter));
+        }
+    },
 
-	beforeFilter: function(filter) {
-		this.beforeFilters.push(filter);
-	},
+    beforeFilter: function (filter) {
+        this.beforeFilters.push(filter);
+    },
 
-	afterFilter: function(filter) {
-		this.afterFilters.push(filter);
-	},
+    afterFilter: function (filter) {
+        this.afterFilters.push(filter);
+    },
 
 };
