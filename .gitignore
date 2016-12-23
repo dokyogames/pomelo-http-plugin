@@ -1,5 +1,8 @@
+example/game-server/node_modules/*
 node_modules
 *~
 *.log
 ^.
 *.pem
+.idea
+node_modules/*
